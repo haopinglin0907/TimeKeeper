@@ -12,7 +12,7 @@ public class PlayerDataCtrl : MonoBehaviour
 
     public string deviceName;
     public string subjectID;
-    public int trainingState;
+    public int trainingState = 2;
     public TextMeshProUGUI ButtonTextGUI;
 
     Dropdown dropdownText;
@@ -43,7 +43,7 @@ public class PlayerDataCtrl : MonoBehaviour
     public void Update()
     {
         deviceName = dropdownText.options[dropdownText.value].text;
-        trainingState = transform.GetComponentInChildren<ChangeStatus>().CurrentStateIndex;
+        //trainingState = transform.GetComponentInChildren<ChangeStatus_v2>().CurrentStateIndex;
         subjectID = inputField.text;
         SubjectSessionData.userData.id = subjectID;
     }
